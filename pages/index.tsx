@@ -1,9 +1,11 @@
 //Rebound Studios, 2022
-//Author: Joel Williams yessir
+//Author: Joel Williams
 
+import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -45,19 +47,18 @@ import { Line } from 'react-chartjs-2'
 
  */
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  Filler);
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    Filler);
 
-export default function Home() {
-
-  function calculateThrowVolume(effort, throwsPerDay, days) {
+const Home: NextPage = () => {
+  function calculateThrowVolume(effort: number, throwsPerDay: number, days: number) {
 
     var throwsArray = [throwsPerDay];
 
@@ -139,3 +140,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;
