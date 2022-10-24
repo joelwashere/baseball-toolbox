@@ -6,6 +6,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import { HomeView } from '../views'
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -47,76 +49,17 @@ import { Line } from 'react-chartjs-2'
 
  */
 
-  ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-    Filler);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler);
 
 const Home: NextPage = () => {
-  function calculateThrowVolume(effort: number, throwsPerDay: number, days: number) {
-
-    var throwsArray = [throwsPerDay];
-
-    for(var i = 1; i < days; i++) {
-      var day = i + 1;
-      var totalThrows = throwsArray[i - 1] + (day * throwsPerDay);
-      throwsArray.push(totalThrows);
-    }
-
-    return throwsArray;
-  }
-
-  const options = {
-    plugins: {
-      legend: {
-        display: false
-      },
-      title: {
-        display: true,
-        text: "Throwing Volume",
-        font: {
-          size: 18
-        }
-      }
-    },
-    elements: {
-      line: {
-        tension: 0,
-        borderWidth: 1,
-        borderColor: "lightblue",
-        fill: "start",
-        backgroundColor: "lightblue"
-      },
-      point: {
-        radius: 10,
-        hitRadius: 10
-      }
-    },
-    scales: {
-      x: {
-        display: true,
-        ticks: {
-          color: "white"
-        }
-      },
-      y: {
-        display: true,
-        ticks: {
-          color: "white"
-        }
-      }
-    }
-  }
-
-  var defaultData = {
-    labels: [...Array(100).keys()],
-    datasets: [{data: calculateThrowVolume(50, 10, 100)}]
-  };
 
   return (
     <div className={styles.container}>
@@ -125,20 +68,10 @@ const Home: NextPage = () => {
         <meta name="description" content="Baseball Toolbox homepage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to Baseball Toolbox
-        </h1>
-
-        <Line data={defaultData} width={100} height={40} options={options}></Line>
-
-      </main>
-
-      <footer className={styles.footer}>
-      </footer>
+      <HomeView />
     </div>
-  )
+  );
+  
 }
 
 export default Home;
