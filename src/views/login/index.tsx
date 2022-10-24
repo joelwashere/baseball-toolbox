@@ -1,13 +1,13 @@
-import { useState, FC } from "react";
+import { useState, FC, ChangeEvent } from "react";
 
 export const LoginView: FC = ({ }) => {
   var classNames = require('classnames');
 
   let [strength, setStrength] = useState(0);
-  let [validations, setValidity] = useState([]);
+  let [validations, setValidity] = useState<boolean[]>([]);
   let [showPassword, setShowPassword] = useState(false);
 
-  function validatePassword(event) {
+  function validatePassword(event: ChangeEvent<HTMLInputElement>) {
     const password = event.target.value;
 
     setValidity([
@@ -17,7 +17,7 @@ export const LoginView: FC = ({ }) => {
       password.search(/[$&+,:;=?@#]/) > -1
     ]);
 
-    setStrength(validations.reduce((acc, cur) => acc + cur, 0));
+    setStrength(validations.reduce((acc, cur) => acc + Number(cur), 0));
     console.log(strength);
 
   }
