@@ -1,5 +1,7 @@
 ## Getting Started
 
+Baseball Toolbox is an app for storing and visualizing baseball player metrics.
+
 First, run the development server:
 
 ```bash
