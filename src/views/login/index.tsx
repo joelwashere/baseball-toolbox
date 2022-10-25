@@ -23,7 +23,7 @@ export const LoginView: FC = ({ }) => {
   }
 
   return (
-    <main className="center">
+    <main className="">
       <form>
         <div className={"field"}>
           <input className={"input"} type={"email"} name={"email"} placeholder={""} />
