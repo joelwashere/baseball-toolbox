@@ -75,15 +75,14 @@ export const HomeView: FC = ({ }) => {
   };
   
   return (
-    <div>
-      <main>
-        <h1>
-          Welcome to Baseball Toolbox
-        </h1>
+    <main>
+      <div className="mx-4">
+          <h1 className="text-3xl text-center font-bold my-4">
+            Welcome to Baseball Toolbox
+          </h1>
 
-        <Line data={defaultData} width={100} height={30} options={options}></Line>
-
-      </main>
-    </div>
+          <Line data={defaultData} width={100} height={30} options={options}></Line>
+      </div>
+    </main>
   );
 }
