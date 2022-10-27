@@ -12,11 +12,10 @@ export const SideBar: FC = () => {
   );
 };
 
-export const SideBarIcon: FC = ({ icon }) => {
+export const SideBarIcon: FC = icon => {
   return (
     <div className="sidebar-icon">
-      {icon}
-      A
+      
     </div>
   );
 };

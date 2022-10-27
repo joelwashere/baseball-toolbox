@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import styles from '../../styles/Home.module.css';
 
 import {
   Chart as ChartJS,
@@ -76,9 +75,9 @@ export const HomeView: FC = ({ }) => {
   };
   
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+    <div>
+      <main>
+        <h1>
           Welcome to Baseball Toolbox
         </h1>
 
