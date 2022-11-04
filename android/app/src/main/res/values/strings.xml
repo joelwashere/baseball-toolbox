@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Baseball Toolbox</string>
+    <string name="title_activity_main">Baseball Toolbox</string>
+    <string name="package_name">com.reboundstudios.bt</string>
+    <string name="custom_url_scheme">com.reboundstudios.bt</string>
+</resources>

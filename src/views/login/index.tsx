@@ -1,14 +1,10 @@
-import { useState, FC, ChangeEvent } from "react";
-import { LoginForm } from "../../components/LoginForm";
+import { FC } from "react";
+import { LoginForm } from "../../components/login-form";
 
 export const LoginView: FC = ({ }) => {
-  var classNames = require('classnames');
-
-  
-
   return (
-    <main className="flex place-content-center items-center h-screen w-screen">
+    <div className="h-screen flex items-center justify-center">
       <LoginForm />
-    </main>
+    </div>
   );
 }

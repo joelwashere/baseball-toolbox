@@ -1,20 +1,28 @@
-import type { NextPage } from 'next'
+import { NextPageWithLayout } from './_app';
 import Head from 'next/head'
+import { ReactElement } from 'react';
+import { Layout } from '../components/layout';
 import { LoginView } from '../views';
 
-const Login: NextPage = () => {
-
+const Login: NextPageWithLayout = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Login</title>
         <meta name="description" content="login page." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LoginView />
-    </div>
+    </>
   );
-    
+}
+
+Login.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  );
 }
   
 export default Login;
