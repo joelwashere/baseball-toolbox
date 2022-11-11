@@ -13,8 +13,12 @@
 
 @layer components {
   .sidebar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto
-            shadow-lg bg-gray-800 text-green-600 hover:text-white;
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-2
+            shadow-lg bg-white text-fuchsia-600 hover:text-white rounded-2xl transition-all;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 left-14 scale-x-0 text-base group-hover:duration-500 origin-left transition-all group-hover:scale-x-100;
   }
 
 }
