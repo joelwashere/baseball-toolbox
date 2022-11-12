@@ -1,14 +1,14 @@
 import { Footer } from "./footer";
-import { NavBar } from "./navbar";
+import { SideBar } from "./sidebar";
 
 export const Layout = ({ children }: any) => {
   return (
     <>
       <div className="h-screen overflow-hidden">
-        <NavBar />
-        <main className="h-full">{children}</main>
-        <Footer />
+        <SideBar />
+        <main className="m-0">{children}</main>
       </div>
+      <Footer />
     </>
   )
 }

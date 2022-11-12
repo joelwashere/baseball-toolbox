@@ -12,7 +12,7 @@ import {
   Filler
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { Dropdown } from '../../components/dropdown';
+import { Dropdown, DropdownItem } from '../../components/dropdown';
 
 /** Below Info from DRIVELINE BASEBALL */
 
@@ -90,7 +90,7 @@ export const GraphView: FC = ({ }) => {
       {
         label: "Throws",
         data: calculateThrowVolume(50, 10, 100),
-        borderColor: "#af3ff4"
+        borderColor: "#38bdf8"
       }
     ]
   };
@@ -99,9 +99,8 @@ export const GraphView: FC = ({ }) => {
     <div className="flex h-full mx-auto items-center justify-center">
       <div className="flex flex-col h-full w-[10%] my-24 mx-auto">
         <Dropdown title="Big Dataset">
-          <p className="text-blue-300 hover:bg-blue-400 hover:text-white">Hello Dropdown!</p>
+          <DropdownItem text="Workload" />
         </Dropdown>
-        <Dropdown title="Little Dataset"></Dropdown>
       </div>
       <div className="w-2/3">
         <h1 className="text-3xl text-center font-bold my-4">
@@ -110,7 +109,7 @@ export const GraphView: FC = ({ }) => {
     
         <Line options={options} data={defaultData} />
       </div>
-      <div className="w-[10%] mx-auto bg-purple-400">
+      <div className="w-[10%] mx-auto bg-zinc-400">
         <h2>Bye guys</h2>
       </div>
     </div>

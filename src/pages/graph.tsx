@@ -1,7 +1,7 @@
 import { NextPageWithLayout } from './_app';
 import { ReactElement } from 'react';
 import Head from 'next/head'
-import { SideBarLayout } from '../components/sidebar-layout';
+import { Layout } from '../components/layout';
 import { GraphView } from '../views';
 
 const Graph: NextPageWithLayout = () => {
@@ -20,9 +20,9 @@ const Graph: NextPageWithLayout = () => {
 
 Graph.getLayout = function getLayout(page: ReactElement) {
   return (
-    <SideBarLayout>
+    <Layout>
       {page}
-    </SideBarLayout>
+    </Layout>
   );
 }
     

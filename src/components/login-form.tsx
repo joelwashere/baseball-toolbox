@@ -23,7 +23,7 @@ export const LoginForm: FC = () => {
 
   return (
     <div>
-      <h1 className="block text-2xl">{newUser ? "Create Account" : "Login"}</h1>
+      <h1 className="block text-2xl bg-slate-500/50 p-1">{newUser ? "Create Account" : "Login"}</h1>
       <form className="text-slate-400 max-w-2xl">
         <div className="group w-full my-3 mx-auto relative border-dashed border-b-2 border-[#afafaf] mt-4 transition duration-500 after:content-[''] after:relative after:block after:h-[4px] after:w-full 
         after:bg-fuchsia-400 after:scale-x-0 after:origin-[0%] after:opacity-0 after:transition-all after:duration-500 after:ease-in-out after:top-1 focus-within:border-transparent focus-within:after:scale-x-100 focus-within:after:opacity-100">
