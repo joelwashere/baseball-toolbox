@@ -109,8 +109,10 @@ export const GraphView: FC = ({ }) => {
     
         <Line options={options} data={defaultData} />
       </div>
-      <div className="w-[10%] mx-auto bg-zinc-400">
-        <h2>Bye guys</h2>
+      <div className="w-[10%] mx-auto p-1 bg-zinc-400">
+        <div className="px-0.5">
+          <h2>Bye guys</h2>
+        </div>
       </div>
     </div>
   );

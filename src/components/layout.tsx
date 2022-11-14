@@ -6,7 +6,7 @@ export const Layout = ({ children }: any) => {
     <>
       <div className="h-screen overflow-hidden">
         <SideBar />
-        <main className="m-0">{children}</main>
+        <main className="m-0 ml-14">{children}</main>
       </div>
       <Footer />
     </>
